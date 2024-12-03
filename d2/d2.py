@@ -14,7 +14,7 @@ take_diff = lambda x: functools.reduce(operator.sub, x)
 is_kosher = lambda row: all((x > 0 and x <= 3 for x in row)) or all((x < 0 and x >= -3 for x in row))
 
 def row_test(row: list, strict=True) -> bool:
-    rows = [row] if strict else [row[:i] + row[i+1:] for i, _ in enumerate(row)] + [row] # generate row options
+    rows = [row] if strict else [row[:i] + row[i+1:] for i, _ in enumerate(row)]  # generate row options
 
     pairwises = [list(itertools.pairwise(x)) for x in rows]
     diffs =  [list(map(take_diff, list(row))) for row in pairwises]
