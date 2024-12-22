@@ -29,3 +29,4 @@ if __name__ == "__main__":
 
     ans2 = part2(sorteds)
     print(f"part2 = {ans2}")
+# %%
